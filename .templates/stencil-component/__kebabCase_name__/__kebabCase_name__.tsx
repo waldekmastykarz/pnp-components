@@ -2,7 +2,7 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: '{{kebabCase name}}',
-  styleUrl: '{{kebabCase name}}.css',
+  styleUrl: '{{kebabCase name}}.scss',
   shadow: true
 })
 export class {{pascalCase name}} {

@@ -1,4 +1,4 @@
-import { Component, Prop } from '@stencil/core';
+import { Component, State, Listen } from '@stencil/core';
 
 @Component({
   tag: 'my-component',
@@ -7,13 +7,25 @@ import { Component, Prop } from '@stencil/core';
 })
 export class MyComponent {
 
-  @Prop() first: string;
-  @Prop() last: string;
+  @State() wpTitle: string = "Web Part Title";
+
+  @Listen('updateProperty')
+  private updateProperty(ev: CustomEvent) {
+    this.wpTitle = ev.detail;
+  }
+
+  // @Listen('updateProperty')
+  // private updateProperty(val) {
+  //   this.wpTitle = val;
+  // }
 
   render() {
     return (
       <div>
-        Hello, World! I'm {this.first} {this.last}
+        <pnp-spfx-webparttitle wp-title={this.wpTitle} display-mode="1"></pnp-spfx-webparttitle>
+        {/* <pnp-spfx-webparttitle wp-title={this.wpTitle} display-mode="2" updateProperty={this.updateProperty} ></pnp-spfx-webparttitle> */}
+        <pnp-spfx-webparttitle wp-title={this.wpTitle} display-mode="2" onUpdateProperty={ev => this.updateProperty(ev)} ></pnp-spfx-webparttitle>
+        <pnp-spfx-webparttitle wp-title="" display-mode="2" ></pnp-spfx-webparttitle>
       </div>
     );
   }

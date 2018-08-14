@@ -30,8 +30,7 @@ declare global {
 
   namespace StencilComponents {
     interface MyComponent {
-      'first': string;
-      'last': string;
+
     }
   }
 
@@ -54,8 +53,45 @@ declare global {
   }
   namespace JSXElements {
     export interface MyComponentAttributes extends HTMLAttributes {
-      'first'?: string;
-      'last'?: string;
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PnpSpfxWebparttitle {
+      'className': string;
+      'displayMode': DisplayMode;
+      'wpTitle': string;
+    }
+  }
+
+  interface HTMLPnpSpfxWebparttitleElement extends StencilComponents.PnpSpfxWebparttitle, HTMLStencilElement {}
+
+  var HTMLPnpSpfxWebparttitleElement: {
+    prototype: HTMLPnpSpfxWebparttitleElement;
+    new (): HTMLPnpSpfxWebparttitleElement;
+  };
+  interface HTMLElementTagNameMap {
+    'pnp-spfx-webparttitle': HTMLPnpSpfxWebparttitleElement;
+  }
+  interface ElementTagNameMap {
+    'pnp-spfx-webparttitle': HTMLPnpSpfxWebparttitleElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'pnp-spfx-webparttitle': JSXElements.PnpSpfxWebparttitleAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PnpSpfxWebparttitleAttributes extends HTMLAttributes {
+      'className'?: string;
+      'displayMode'?: DisplayMode;
+      'onUpdateProperty'?: (event: CustomEvent) => void;
+      'wpTitle'?: string;
     }
   }
 }

@@ -6,8 +6,19 @@
     "experimentalDecorators": true,
     "lib": [
       "dom",
+      "es5",
+      "es2015",
+      "es2015.collection",
       "es2017"
     ],
+    "types": [
+      "es6-promise"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@microsoft"
+    ],
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "module": "es2015",
     "target": "es2017",

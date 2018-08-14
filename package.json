@@ -13,9 +13,12 @@
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "jest",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "tsc": "tsc -v"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@microsoft/sp-core-library": "1.5.1"
+  },
   "devDependencies": {
     "@stencil/core": "^0.11.0",
     "@stencil/sass": "^0.1.0",
