@@ -3,7 +3,12 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'pnp-components',
-  outputTargets:[
+  bundles: [
+    { components: ['pnp-fabric-icon'] },
+    { components: ['pnp-fabric-button'] },
+    { components: ['pnp-spfx-placeholder'] }
+  ],
+  outputTargets: [
     {
       type: 'dist'
     },
@@ -11,6 +16,9 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null
     }
+  ],
+  copy: [
+    { src: 'demo' }
   ],
   plugins: [
     sass()

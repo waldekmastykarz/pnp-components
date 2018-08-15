@@ -60,6 +60,145 @@ declare global {
   }
 }
 
+
+declare global {
+
+  namespace StencilComponents {
+    interface PnpFabricButton {
+      'disabled': boolean;
+      'href': string;
+      'primary': boolean;
+      'text': string;
+    }
+  }
+
+  interface HTMLPnpFabricButtonElement extends StencilComponents.PnpFabricButton, HTMLStencilElement {}
+
+  var HTMLPnpFabricButtonElement: {
+    prototype: HTMLPnpFabricButtonElement;
+    new (): HTMLPnpFabricButtonElement;
+  };
+  interface HTMLElementTagNameMap {
+    'pnp-fabric-button': HTMLPnpFabricButtonElement;
+  }
+  interface ElementTagNameMap {
+    'pnp-fabric-button': HTMLPnpFabricButtonElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'pnp-fabric-button': JSXElements.PnpFabricButtonAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PnpFabricButtonAttributes extends HTMLAttributes {
+      'disabled'?: boolean;
+      'href'?: string;
+      'primary'?: boolean;
+      'text'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PnpFabricIcon {
+      'name': string;
+    }
+  }
+
+  interface HTMLPnpFabricIconElement extends StencilComponents.PnpFabricIcon, HTMLStencilElement {}
+
+  var HTMLPnpFabricIconElement: {
+    prototype: HTMLPnpFabricIconElement;
+    new (): HTMLPnpFabricIconElement;
+  };
+  interface HTMLElementTagNameMap {
+    'pnp-fabric-icon': HTMLPnpFabricIconElement;
+  }
+  interface ElementTagNameMap {
+    'pnp-fabric-icon': HTMLPnpFabricIconElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'pnp-fabric-icon': JSXElements.PnpFabricIconAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PnpFabricIconAttributes extends HTMLAttributes {
+      'name'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface PnpSpfxPlaceholder {
+      /**
+       * Text label to be displayed on button below the description. Optional: As the button is optional.
+       */
+      'buttonLabel': string;
+      /**
+       * Text description for the placeholder. Appears bellow the Icon and IconText.
+       */
+      'description': string;
+      /**
+       * Icon name used for the className from the MDL2 set. Example: 'Add'.
+       */
+      'iconName': string;
+      /**
+       * Heading displayed against the Icon.
+       */
+      'iconText': string;
+    }
+  }
+
+  interface HTMLPnpSpfxPlaceholderElement extends StencilComponents.PnpSpfxPlaceholder, HTMLStencilElement {}
+
+  var HTMLPnpSpfxPlaceholderElement: {
+    prototype: HTMLPnpSpfxPlaceholderElement;
+    new (): HTMLPnpSpfxPlaceholderElement;
+  };
+  interface HTMLElementTagNameMap {
+    'pnp-spfx-placeholder': HTMLPnpSpfxPlaceholderElement;
+  }
+  interface ElementTagNameMap {
+    'pnp-spfx-placeholder': HTMLPnpSpfxPlaceholderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'pnp-spfx-placeholder': JSXElements.PnpSpfxPlaceholderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PnpSpfxPlaceholderAttributes extends HTMLAttributes {
+      /**
+       * Text label to be displayed on button below the description. Optional: As the button is optional.
+       */
+      'buttonLabel'?: string;
+      /**
+       * Text description for the placeholder. Appears bellow the Icon and IconText.
+       */
+      'description'?: string;
+      /**
+       * Icon name used for the className from the MDL2 set. Example: 'Add'.
+       */
+      'iconName'?: string;
+      /**
+       * Heading displayed against the Icon.
+       */
+      'iconText'?: string;
+      /**
+       * onConfigure handler for the button. Optional: As the button is optional.
+       */
+      'onConfigure'?: (event: CustomEvent) => void;
+    }
+  }
+}
+
 declare global { namespace JSX { interface StencilJSX {} } }
 
 export declare function defineCustomElements(window: any): void;

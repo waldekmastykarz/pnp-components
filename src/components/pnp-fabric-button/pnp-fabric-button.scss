@@ -1,0 +1,65 @@
+.button {
+  position: relative;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  font-weight: 400;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  vertical-align: top;
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+  min-width: 80px;
+  height: 32px;
+  background-color: rgb(244, 244, 244);
+  color: rgb(51, 51, 51);
+  user-select: none;
+  outline: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  text-decoration: none;
+  border-radius: 0px;
+
+  &:hover {
+    background-color: rgb(234, 234, 234);
+    color: rgb(0, 0, 0);
+  }
+
+  &.primary {
+    background-color: rgb(0, 120, 212);
+    color: rgb(255, 255, 255);
+
+    &:hover {
+      background-color: rgb(16, 110, 190);
+    }
+  }
+
+  &.disabled, &.disabled:hover {
+    background-color: rgb(244, 244, 244);
+    color: rgb(166, 166, 166);
+  }
+}
+
+.flexContainer {
+  display: flex;
+  height: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  flex-grow: 1;
+}
+
+.label {
+  margin: 0 4px;
+  line-height: 1;
+  font-weight: 600;
+}

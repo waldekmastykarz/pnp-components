@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/pnp-components.js"></script>
+  <link href="fabricicons.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <a href="/">&laquo; back</a>
+
+  <h1>pnp-spfx-placeholder</h1>
+
+  <div style="max-width: 736px">
+    <pnp-spfx-placeholder icon-name="Edit" icon-text="Configure your web part" description="Please configure your web part" button-label="Configure"></pnp-spfx-placeholder>
+    <script>
+      document.querySelector('pnp-spfx-placeholder').addEventListener('configure', function () {
+        alert('Configuring...');
+      });
+    </script>
+  </div>
+
+  <pre>
+&lt;pnp-spfx-placeholder icon-name="Edit" icon-text="Configure your web part"
+description="Please configure your web part" button-label="Configure">&lt;/pnp-spfx-placeholder>
+&lt;script>
+  document.querySelector('pnp-spfx-placeholder').addEventListener('configure', function () {
+    alert('Configuring...');
+  });
+&lt;/script>
+  </pre>
+
+  <a href="/">&laquo; back</a>
+
+</body>
+
+</html>
