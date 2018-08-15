@@ -17,6 +17,7 @@ export const config: Config = {
       serviceWorker: null
     }
   ],
+  globalStyle: 'src/globals/app.scss',
   copy: [
     { src: 'demo' }
   ],
