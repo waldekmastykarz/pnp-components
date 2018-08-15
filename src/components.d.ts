@@ -65,6 +65,8 @@ declare global {
     interface PnpSpfxWebparttitle {
       'className': string;
       'displayMode': DisplayMode;
+      'onupdateproperty': string;
+      'onupdatepropertyshort': string;
       'wpTitle': string;
     }
   }
@@ -90,7 +92,9 @@ declare global {
     export interface PnpSpfxWebparttitleAttributes extends HTMLAttributes {
       'className'?: string;
       'displayMode'?: DisplayMode;
-      'onUpdateProperty'?: (event: CustomEvent) => void;
+      'onUpdateProperty'?: (event: CustomEvent<string>) => void;
+      'onupdateproperty'?: string;
+      'onupdatepropertyshort'?: string;
       'wpTitle'?: string;
     }
   }

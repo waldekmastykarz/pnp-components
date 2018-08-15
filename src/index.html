@@ -8,7 +8,11 @@
 
   <script>
     function webparttitlechanged(value) {
-      console.log("change");
+      console.log(value);
+    }
+
+    function webparttitlechanged1(evt) {
+      console.log(evt.detail);
     }
   </script>
 </head>
@@ -16,6 +20,15 @@
 
   <my-component></my-component>
 
+  <hr />
 
+  <pnp-spfx-webparttitle wp-title="HTML-like event handling" display-mode="2" onupdateproperty="webparttitlechanged(this.wpTitle);"></pnp-spfx-webparttitle>
+  <pnp-spfx-webparttitle wp-title="Short event handling" display-mode="2" onupdatepropertyshort="webparttitlechanged1"></pnp-spfx-webparttitle>
+  <pnp-spfx-webparttitle wp-title="Imperative event handling" display-mode="2" id="wpTitle"></pnp-spfx-webparttitle>
+  <script>
+    document.getElementById('wpTitle').addEventListener('updateProperty', function(e) {
+      console.log(e.detail);
+    });
+  </script>
 </body>
 </html>
