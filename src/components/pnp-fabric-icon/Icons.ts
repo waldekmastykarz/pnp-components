@@ -1,3 +1,4 @@
+// from https://github.com/OfficeDev/office-ui-fabric-core/blob/master/src/data/icons.json
 export const icons = [
   { "name": "12PointStar", "unicode": "F505" },
   { "name": "6PointStar", "unicode": "F504" },
