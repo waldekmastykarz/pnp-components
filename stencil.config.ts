@@ -14,5 +14,15 @@ export const config: Config = {
   ],
   plugins: [
     sass()
-  ]
+  ],
+  // rollupConfig: {
+  //   outputOptions: {
+  //     globals: {
+  //       '@microsoft/sp-http': '@microsoft/sp-http'
+  //     }
+  //   }
+  // }
+  nodeResolve: {
+    browser: true
+  }
 };
