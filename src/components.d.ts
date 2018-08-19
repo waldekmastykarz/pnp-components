@@ -103,6 +103,62 @@ declare global {
 declare global {
 
   namespace StencilComponents {
+    interface PnpFabricCheckbox {
+      /**
+       * Checked state
+       */
+      'checked': boolean;
+      /**
+       * Enabled state
+       */
+      'disabled': boolean;
+      /**
+       * Label to display next to the checkbox.
+       */
+      'label': string;
+    }
+  }
+
+  interface HTMLPnpFabricCheckboxElement extends StencilComponents.PnpFabricCheckbox, HTMLStencilElement {}
+
+  var HTMLPnpFabricCheckboxElement: {
+    prototype: HTMLPnpFabricCheckboxElement;
+    new (): HTMLPnpFabricCheckboxElement;
+  };
+  interface HTMLElementTagNameMap {
+    'pnp-fabric-checkbox': HTMLPnpFabricCheckboxElement;
+  }
+  interface ElementTagNameMap {
+    'pnp-fabric-checkbox': HTMLPnpFabricCheckboxElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'pnp-fabric-checkbox': JSXElements.PnpFabricCheckboxAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface PnpFabricCheckboxAttributes extends HTMLAttributes {
+      /**
+       * Checked state
+       */
+      'checked'?: boolean;
+      /**
+       * Enabled state
+       */
+      'disabled'?: boolean;
+      /**
+       * Label to display next to the checkbox.
+       */
+      'label'?: string;
+      'onOnClick'?: (event: CustomEvent<boolean>) => void;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
     interface PnpFabricIcon {
       'name': string;
     }

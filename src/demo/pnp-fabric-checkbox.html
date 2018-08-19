@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/pnp-components.js"></script>
+  <link href="/build/pnp-components.css" rel="stylesheet"/>
+  <link href="fabricicons.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <a href="/">&laquo; back</a>
+
+  <h1>pnp-fabric-checkbox</h1>
+
+  <div style="max-width: 736px">
+    <pnp-fabric-checkbox id="pnp-fabric-checkbox" label="PnP Fabric Checkbox (click to change state)" checked="true"></pnp-fabric-checkbox>
+    <br />
+    <pnp-fabric-checkbox label="PnP Fabric Disabled Checkbox" disabled="true"></pnp-fabric-checkbox>
+    <br />
+    <button id="btnCheck" type="button">Change state</button>
+
+    <script>
+      document.getElementById('pnp-fabric-checkbox').addEventListener('onClick', function (event) {
+        alert('Is checked: ' + event.detail);
+      });
+
+      document.getElementById('btnCheck').addEventListener('click', function () {
+        var checkbox = document.getElementById('pnp-fabric-checkbox');
+        checkbox.checked = !checkbox.checked;
+      });
+    </script>
+  </div>
+
+  <pre>
+&lt;pnp-fabric-checkbox id=&quot;pnp-fabric-checkbox&quot; label=&quot;PnP Fabric Checkbox&quot; checked=&quot;true&quot;&gt;&lt;/pnp-fabric-checkbox&gt;
+&lt;br /&gt;
+&lt;pnp-fabric-checkbox label=&quot;PnP Fabric Disabled Checkbox&quot; disabled=&quot;true&quot;&gt;&lt;/pnp-fabric-checkbox&gt;
+&lt;br /&gt;
+&lt;button id=&quot;btnCheck&quot; type=&quot;button&quot;&gt;Change state&lt;/button&gt;
+
+&lt;script&gt;
+  document.getElementById('pnp-fabric-checkbox').addEventListener('onClick', function (event) {
+    alert('Is checked: ' + event.detail);
+  });
+
+  document.getElementById('btnCheck').addEventListener('click', function () {
+    var checkbox = document.getElementById('pnp-fabric-checkbox');
+    checkbox.checked = !checkbox.checked;
+  });
+&lt;/script&gt;
+  </pre>
+
+  <a href="/">&laquo; back</a>
+
+</body>
+
+</html>

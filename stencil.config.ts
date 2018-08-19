@@ -6,7 +6,8 @@ export const config: Config = {
   bundles: [
     { components: ['pnp-fabric-icon'] },
     { components: ['pnp-fabric-button'] },
-    { components: ['pnp-spfx-placeholder'] }
+    { components: ['pnp-spfx-placeholder'] },
+    { components: ['pnp-fabric-checkbox'] }
   ],
   outputTargets: [
     {
