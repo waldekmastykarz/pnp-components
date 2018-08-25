@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.5.1",
+    "libraryName": "yo-themespfx",
+    "libraryId": "9a75983e-2c6c-48d8-839b-ff191f9bc8d6",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}
